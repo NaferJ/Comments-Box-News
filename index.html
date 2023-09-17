@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Noticias</title>
+</head>
+<body>
+    <header>
+        <h1>Noticias</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Categorías</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="noticia">
+            <img src="/img/Tiers.jpg" alt="Imagen de la noticia">
+            <div class="contenido">
+                <h2>Los niveles de League of Legends</h2>
+                <p><strong>Los nueve niveles o categorías en League of Legends son: Hierro, Bronce, Plata, Oro, Platino, Diamante, Master, GrandMaster y Challenger.</strong> La mayoría de los jugadores actuales de LoL se mantienen en los niveles iniciales de Hierro, Bronce, Plata y Oro por un buen tiempo, lo cual es una muestra de lo difícil que puede llegar a ser obtener un rango más alto en el juego y el nivel de competitividad que puedes encontrar entre otros jugadores.</p>
+                <p>La mayoría de los jugadores actuales de LoL se mantienen en los niveles iniciales de Hierro, Bronce, Plata y Oro por un buen tiempo lo cual es una muestra de que tan difícil puede llegar a ser obtener un rango más alto en el juego y el nivel de competitividad que puedes encontrar entre otros jugadores.</p>
+                <div class="like-dislike">
+                    <button class="like">Me gusta</button>
+                    <button class="dislike">No me gusta</button>
+                </div>
+            </div>
+        </article>
+
+        <aside class="anuncios">
+            <h3>Anuncios</h3>
+            <ul>
+                <li><img src="/img/anuncio1.jpg" alt="Anuncio 1" width="200px"></li>
+                <li><img src="/img/anuncio2.jpg" alt="Anuncio 2" width="200px"></li>
+                <li><img src="/img/anuncio3.jpg" alt="Anuncio 3" width="200px"></li>
+            </ul>
+        </aside>
+
+        <!-- Agregar más noticias aquí -->
+
+        <!-- Caja de comentarios -->
+        <div class="comentarios">
+            <h3>Comentarios</h3>
+            <textarea id="comentario" rows="4" placeholder="Escribe tu comentario aquí"></textarea>
+            <br>
+            <button id="publicar-comentario">Publicar Comentario</button>
+            <br><br>
+            <div id="lista-comentarios"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Creado por NaferJ</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
