@@ -167,3 +167,12 @@ footer {
 .acciones-comentario button:hover {
     background-color: #555;
 }
+
+/* Estilos de los botones "Me gusta" y "No me gusta" cuando están activos */
+.like.activo,
+.dislike.activo,
+.me-gusta.activo,
+.no-me-gusta.activo {
+    background-color: blue; /* Cambiar el color de fondo a azul */
+    color: white; /* Cambiar el color del texto a blanco */
+}
