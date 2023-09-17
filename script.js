@@ -27,55 +27,35 @@ function publicarComentario() {
     document.getElementById('comentario').value = '';
 }
 
-// Función para manejar el botón "Me gusta"
+// Función para manejar el botón "Me gusta" en comentarios y noticias
 function meGusta(boton) {
-    // Verificar si ya se ha hecho clic en "Me gusta"
     if (boton.classList.contains('activo')) {
         boton.classList.remove('activo');
-        // Restar 1 al contador de "Me gusta"
-        var contador = boton.nextElementSibling;
-        contador.textContent = parseInt(contador.textContent) - 1;
+        boton.textContent = 'Me gusta';
     } else {
-        // Verificar si se ha hecho clic en "No me gusta" y desactivarlo si es necesario
-        var noMeGustaBoton = boton.parentElement.querySelector('.no-me-gusta.activo');
-        if (noMeGustaBoton) {
-            noMeGustaBoton.classList.remove('activo');
-            // Restar 1 al contador de "No me gusta"
-            var contadorNoMeGusta = noMeGustaBoton.nextElementSibling;
-            contadorNoMeGusta.textContent = parseInt(contadorNoMeGusta.textContent) - 1;
-        }
-
-        // Activar el botón "Me gusta"
         boton.classList.add('activo');
-        // Sumar 1 al contador de "Me gusta"
-        var contador = boton.nextElementSibling;
-        contador.textContent = parseInt(contador.textContent) + 1;
+        boton.textContent = 'Me gusta (1)';
+        var siblingDislikeButton = boton.nextElementSibling.nextElementSibling;
+        if (siblingDislikeButton && siblingDislikeButton.classList.contains('activo')) {
+            siblingDislikeButton.classList.remove('activo');
+            siblingDislikeButton.textContent = 'No me gusta';
+        }
     }
 }
 
-// Función para manejar el botón "No me gusta"
+// Función para manejar el botón "No me gusta" en comentarios y noticias
 function noMeGusta(boton) {
-    // Verificar si ya se ha hecho clic en "No me gusta"
     if (boton.classList.contains('activo')) {
         boton.classList.remove('activo');
-        // Restar 1 al contador de "No me gusta"
-        var contador = boton.nextElementSibling;
-        contador.textContent = parseInt(contador.textContent) - 1;
+        boton.textContent = 'No me gusta';
     } else {
-        // Verificar si se ha hecho clic en "Me gusta" y desactivarlo si es necesario
-        var meGustaBoton = boton.parentElement.querySelector('.me-gusta.activo');
-        if (meGustaBoton) {
-            meGustaBoton.classList.remove('activo');
-            // Restar 1 al contador de "Me gusta"
-            var contadorMeGusta = meGustaBoton.nextElementSibling;
-            contadorMeGusta.textContent = parseInt(contadorMeGusta.textContent) - 1;
-        }
-
-        // Activar el botón "No me gusta"
         boton.classList.add('activo');
-        // Sumar 1 al contador de "No me gusta"
-        var contador = boton.nextElementSibling;
-        contador.textContent = parseInt(contador.textContent) + 1;
+        boton.textContent = 'No me gusta (1)';
+        var siblingLikeButton = boton.previousElementSibling.previousElementSibling;
+        if (siblingLikeButton && siblingLikeButton.classList.contains('activo')) {
+            siblingLikeButton.classList.remove('activo');
+            siblingLikeButton.textContent = 'Me gusta';
+        }
     }
 }
 
