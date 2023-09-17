@@ -12,9 +12,9 @@ function publicarComentario() {
         <p>${comentario}</p>
         <div class="acciones-comentario">
             <button class="me-gusta" onclick="meGusta(this)">Me gusta</button>
-            <span class="contador-me-gusta">0</span>
+            <span class="contador-me-gusta"></span>
             <button class="no-me-gusta" onclick="noMeGusta(this)">No me gusta</button>
-            <span class="contador-no-me-gusta">0</span>
+            <span class="contador-no-me-gusta"></span>
             <button class="responder" onclick="responder(this)">Responder</button>
         </div>
     `;
