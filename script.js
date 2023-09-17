@@ -66,3 +66,5 @@ function responder(boton) {
 
 // Agregar event listener al botón "Publicar Comentario"
 document.getElementById('publicar-comentario').addEventListener('click', publicarComentario);
+
+
